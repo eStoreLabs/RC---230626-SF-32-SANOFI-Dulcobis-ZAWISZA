@@ -80,32 +80,19 @@
     aspect-ratio: 248/175;
   }
 }
+#es-rc #es-rc-content .es-kv p {
+  margin-bottom: 0;
+}
 #es-rc #es-rc-content .es-kv__packshotCtn {
   position: absolute;
-  transform: translate(-50%);
-  left: 50%;
   bottom: 0;
   display: flex;
-  align-items: flex-end;
-  width: 80%;
-  padding-bottom: 14px;
-  gap: 2%;
-}
-@media (min-width: 576px) {
-  #es-rc #es-rc-content .es-kv__packshotCtn {
-    width: 94%;
-  }
-}
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-kv__packshotCtn {
-    gap: 5%;
-  }
-}
-@media (min-width: 992px) {
-  #es-rc #es-rc-content .es-kv__packshotCtn {
-    width: 90%;
-    margin-bottom: 1.5rem;
-  }
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  align-content: flex-end;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
 }
 #es-rc #es-rc-content .es-kv__mobile {
   display: block;
@@ -123,51 +110,55 @@
     display: block;
   }
 }
+#es-rc #es-rc-content .es-kv__title {
+  width: 100%;
+}
 #es-rc #es-rc-content .es-kv__text {
   font-family: "Montserrat";
   font-weight: 900;
-  color: #fff;
-  padding: 0 10px;
+  color: #a1bd39;
+  font-size: calc(1.5 * clamp(22px, 12.88px + 2.532vw, 38px));
+  padding-left: 22px;
   text-transform: uppercase;
   line-height: 1;
-  font-size: clamp(2.1rem, 1.1601rem + 4.1772vw, 3.75rem);
 }
 #es-rc #es-rc-content .es-kv__text--span {
   display: block;
-  font-size: clamp(1.375rem, 0.428rem + 4.2089vw, 3.0375rem);
-  margin-bottom: 8px;
+  color: #fff;
+  font-size: clamp(22px, 12.88px + 2.532vw, 38px);
+  margin-block: 8px;
+}
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-kv__text {
+    font-size: calc(1.1 * clamp(22px, 12.88px + 2.532vw, 38px));
+    padding-left: 5%;
+  }
+}
+@media (min-width: 992px) {
+  #es-rc #es-rc-content .es-kv__text {
+    font-size: calc(1.2 * clamp(22px, 12.88px + 2.532vw, 38px));
+  }
 }
 #es-rc #es-rc-content .es-kv__packshot {
   animation: slideleft 1s ease forwards;
   bottom: 0;
   left: 5%;
-  height: 250px;
+  height: 185px;
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-kv__packshot {
-    height: 375px;
+    height: 300px;
   }
 }
 @media (min-width: 992px) {
   #es-rc #es-rc-content .es-kv__packshot {
-    height: 480px;
-  }
-}
-#es-rc #es-rc-content .es-kv__background {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-height: 200px;
-}
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-kv__background {
-    max-height: unset;
+    height: 427px;
   }
 }
 #es-rc #es-rc-content .es-features {
   font-family: "Amazon Ember", sans-serif;
   font-size: clamp(12px, 9.722px + 0.6329vw, 16px);
+  padding-bottom: 0;
 }
 #es-rc #es-rc-content .es-features__box {
   padding-inline: 0.75rem;
@@ -177,24 +168,23 @@
   font-weight: 900;
   color: #000;
   max-width: 210px;
+  height: calc(3em + 0.5rem);
 }
-#es-rc #es-rc-content .es-features__title--4 {
-  height: 3.6em;
-}
-@media (min-width: 460px) {
-  #es-rc #es-rc-content .es-features__title--4 {
-    height: 2.4em;
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-features__title {
+    height: calc(2em + 0.5rem);
   }
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-features__title {
-    height: 3.6em;
+    height: calc(4em + 0.7rem);
   }
 }
 @media (min-width: 992px) {
   #es-rc #es-rc-content .es-features__title {
     font-size: 1.3em;
     margin-bottom: 16px;
+    height: calc(3em + 0.5rem);
   }
 }
 #es-rc #es-rc-content .es-features__desc {
@@ -228,12 +218,7 @@
   margin: 0 auto 10px;
 }
 #es-rc #es-rc-content .es-description__box > img {
-  width: 65%;
-}
-@media (min-width: 992px) {
-  #es-rc #es-rc-content .es-description__box > img {
-    width: 57%;
-  }
+  width: 78%;
 }
 #es-rc #es-rc-content .es-description__list {
   text-align: left;
@@ -270,8 +255,9 @@
 }
 @media (min-width: 992px) {
   #es-rc #es-rc-content .es-description__text1 {
-    max-width: 93%;
+    max-width: 85%;
     margin: auto;
+    line-height: 1.3;
   }
 }
 #es-rc #es-rc-content .es-relief__title {
@@ -316,53 +302,21 @@
 #es-rc #es-rc-content .es-why {
   background-color: #a1bd39;
   font-family: "Amazon Ember", sans-serif;
+  padding-bottom: 0;
 }
 #es-rc #es-rc-content .es-why .es-features__title {
-  height: 2em;
+  height: calc(1em + 0.5rem);
 }
 #es-rc #es-rc-content .es-dose {
   background: rgb(4, 94, 72);
   background: linear-gradient(90deg, rgb(4, 94, 72) 22%, rgb(4, 132, 100) 40%, rgb(4, 109, 84) 67%, rgb(4, 124, 97) 95%, rgb(4, 116, 92) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#045e48",endColorstr="#04745c",GradientType=1);
-}
-#es-rc #es-rc-content .es-dose__grid {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  background-color: #a1bd39;
-  border-radius: 15px;
-  color: #fff;
-  box-shadow: 2px 7px 15px 0px rgb(0, 99, 79);
-  aspect-ratio: 13/12;
-}
-@media (min-width: 992px) {
-  #es-rc #es-rc-content .es-dose__grid {
-    font-size: calc(1.15 * clamp(12px, 9.722px + 0.6329vw, 16px));
-  }
-}
-#es-rc #es-rc-content .es-dose__grid--row {
-  display: grid;
-  grid-template-columns: 42% 1fr;
-  padding: 1rem;
-  align-content: center;
-}
-#es-rc #es-rc-content .es-dose__grid--row:nth-of-type(2n) {
-  background-color: #bad45b;
-}
-#es-rc #es-rc-content .es-dose__grid--row:last-of-type {
-  border-radius: 0 0 15px 15px;
-}
-#es-rc #es-rc-content .es-dose__bold {
-  font-weight: 700;
-}
-#es-rc #es-rc-content .es-dose__textUnderBox {
-  font-size: clamp(12px, 9.722px + 0.6329vw, 16px);
-  color: #fff;
+  font-family: "Amazon Ember", sans-serif;
 }
 #es-rc #es-rc-content .es-dose__box {
   padding: 0;
   background-color: #a1bd39;
   border-radius: 15px;
-  color: #fff;
   box-shadow: 2px 7px 15px 0px rgb(0, 99, 79);
   aspect-ratio: 551/479;
   display: grid;
@@ -373,38 +327,33 @@
     aspect-ratio: 13/12;
   }
 }
-#es-rc #es-rc-content .es-dose__figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+#es-rc #es-rc-content .es-dose__box:nth-of-type(1) {
+  padding-top: 1rem;
+}
+#es-rc #es-rc-content .es-dose__img {
+  width: 30%;
+}
+#es-rc #es-rc-content .es-dose__text {
+  color: #000;
+  text-align: center;
+}
+#es-rc #es-rc-content .es-dose__subtitleInBox {
+  font-weight: 700;
+  font-size: calc(1.3 * clamp(12px, 9.722px + 0.6329vw, 16px));
+  margin-bottom: 0;
+  text-align: center;
+  color: #fff;
+}
+#es-rc #es-rc-content .es-dose__textUnderBox {
   font-size: clamp(12px, 9.722px + 0.6329vw, 16px);
-  font-family: "Amazon Ember", sans-serif;
-  padding: 1rem;
+  color: #fff;
+}
+#es-rc #es-rc-content .es-dose__bullet {
+  width: 45px;
 }
 @media (min-width: 992px) {
-  #es-rc #es-rc-content .es-dose__figure {
-    font-size: calc(1.25 * clamp(12px, 9.722px + 0.6329vw, 16px));
-  }
-}
-#es-rc #es-rc-content .es-dose__figure img {
-  height: 250px;
-  aspect-ratio: 110/291;
-}
-@media (min-width: 576px) {
-  #es-rc #es-rc-content .es-dose__figure img {
-    height: 300px;
-  }
-}
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-dose__figure img {
-    height: 350px;
-  }
-}
-@media (min-width: 992px) {
-  #es-rc #es-rc-content .es-dose__figure img {
-    height: 250px;
+  #es-rc #es-rc-content .es-dose__bullet {
+    width: 55px;
   }
 }
 #es-rc #es-rc-content .es-dose__name {
@@ -640,6 +589,9 @@
   font-size: clamp(12px, 9.722px + 0.6329vw, 16px);
   font-weight: 400;
   line-height: 1.2;
+  word-break: auto;
+  -webkit-hyphens: auto;
+          hyphens: auto;
 }
 #es-rc #es-rc-content .es-footer__text--1 {
   font-size: 12px;
