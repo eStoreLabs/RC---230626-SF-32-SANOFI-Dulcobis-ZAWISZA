@@ -50,6 +50,9 @@
   padding: 0;
   overflow: hidden;
 }
+#es-rc #es-rc-content em {
+  font-style: normal;
+}
 #es-rc #es-rc-content .es-mobile-break {
   display: block;
 }

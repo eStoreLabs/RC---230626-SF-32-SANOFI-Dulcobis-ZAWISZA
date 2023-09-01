@@ -81,7 +81,9 @@ $fw-black: 900;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-
+  em {
+    font-style: normal;
+  }
   .es-mobile-break {
     display: block;
   }
