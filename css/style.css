@@ -133,7 +133,7 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
   font-family: "Montserrat";
   font-weight: 900;
   color: #a1bd39;
-  font-size: calc(1.5 * clamp(16px, 7.88px + 2.532vw, 38px));
+  font-size: calc(1.5 * clamp(12px, 5.88px + 2.532vw, 38px));
   padding-left: 22px;
   text-transform: uppercase;
   line-height: 1;
@@ -142,7 +142,7 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
 #es-rc #es-rc-content .es-kv__text--span {
   display: block;
   color: #fff;
-  font-size: clamp(22px, 12.88px + 2.532vw, 38px);
+  font-size: clamp(18px, 10.88px + 2.532vw, 38px);
   margin-block: 4px;
 }
 @media (max-width: 576px) {
@@ -234,7 +234,12 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
 #es-rc #es-rc-content .es-description__list {
   text-align: left;
   list-style-type: none;
-  padding-left: 18%;
+  padding-left: 3%;
+}
+@media (min-width: 450px) {
+  #es-rc #es-rc-content .es-description__list {
+    padding-left: 18%;
+  }
 }
 #es-rc #es-rc-content .es-description__item {
   color: #a1bd39;
@@ -273,7 +278,7 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
 }
 #es-rc #es-rc-content .es-relief__title {
   font-family: "Montserrat";
-  font-size: clamp(22px, 12.88px + 2.532vw, 38px);
+  font-size: clamp(12px, 7.88px + 2.532vw, 38px);
   color: #00604d;
   font-weight: 900;
   text-transform: uppercase;
@@ -286,7 +291,7 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
   font-style: italic;
 }
 #es-rc #es-rc-content .es-relief__title--middle {
-  font-size: calc(3 * clamp(22px, 12.88px + 2.532vw, 38px));
+  font-size: calc(3 * clamp(12px, 7.88px + 2.532vw, 38px));
   color: #a1bd39;
 }
 #es-rc #es-rc-content .es-relief__mobile {
@@ -469,10 +474,20 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
 }
 /* #es-rc #es-rc-content .es-cross .text-left--0 {
   height: 84px!important;
-}
+}*/
 #es-rc #es-rc-content .es-cross .text-left--1 {
-  height: 56px!important;
-} */
+  height: 45px;
+} 
+@media (min-width: 600px) {
+  #es-rc #es-rc-content .es-cross .text-left--1 {
+    height: 47px;
+  } 
+}
+@media (min-width: 900px) {
+  #es-rc #es-rc-content .es-cross .text-left--1 {
+    height: 49px;
+  } 
+}
 
 
 #es-rc #es-rc-content .es-cross__bordered-1 tbody {
@@ -492,6 +507,7 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
   min-width: 150px;
   color: #000;
   font-weight: 500;
+  background-color: #fff;
 }
 #es-rc #es-rc-content .es-cross th {
   vertical-align: middle;
@@ -499,6 +515,7 @@ ol,p,ul{margin-top:0;margin-bottom:1rem}ol,p,ul{margin-bottom:1rem}img,svg{verti
   min-width: 110px;
   color: #005649;
   font-weight: 500;
+  background-color: #fff;
 }
 #es-rc #es-rc-content .es-cross .es-articles__button {
   padding: 7px 21px;
